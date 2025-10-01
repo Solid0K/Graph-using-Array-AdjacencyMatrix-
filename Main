@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args){
+        Graph graph=new Graph(5);
+        graph.AddNode(new Node('A'));
+        graph.AddNode(new Node('B'));
+        graph.AddNode(new Node('C'));
+        graph.AddNode(new Node('F'));
+        graph.AddEdge(0,3);
+        graph.AddEdge(0,4);
+        graph.AddEdge(2,4);
+        System.out.println(graph.HasEdge(0,4));
+        graph.printGraph(5);
+    }
+}
