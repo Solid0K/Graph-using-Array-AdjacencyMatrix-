@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class Graph {
+    int[][] graph;
+    ArrayList<Node> nodes;
+    Graph(int Size){
+        graph=new int[Size][Size];
+    }
+    public void AddNode(Node node){
+        nodes=new ArrayList<>();
+        nodes.add(node);
+    }
+    public void AddEdge(int src,int destin){
+        graph[src][destin]=1;
+    }
+    public boolean HasEdge(int src,int destin){
+        if(graph[src][destin]==1){
+            return true;
+        }
+        return false;
+    }
+    public void printGraph(int Size){
+        for(int i=0;i<Size;i++){
+            for(int j=0;j<Size;j++){
+                System.out.print(graph[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
